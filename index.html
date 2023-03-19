@@ -42,7 +42,7 @@
             display: block;
             margin: 5px auto;
             border-radius: 20px;
-            border: 1px solid black;
+            border: 2px solid black;
             padding: 5px;
             color: white;
             cursor: pointer;
@@ -75,13 +75,47 @@
         <h2 class="heading">Salicylic Acid Gel Face Wash</h2>
 
         <div class="quantity-container">
-            <button class="quantity-btn">+</button>
-            <span>1</span>
-            <button class="quantity-btn">-</button>
+            <button class="quantity-btn" onclick="increment()">+</button>
+            <span id="product-quantity">1</span>
+            <button class="quantity-btn" onclick="decrement()">-</button>
         </div>
 
         <button class="button">Add To Cart</button>
 
     </div>
+
+    <script>
+        function increment(){
+            const element=document.getElementById("product-quantity");
+            const quantity= parseInt(element.innerHTML);
+
+            //OR
+           // const element=document.getElementById("product-quantity");
+            //element.innerHTML=parseInt(element.innerHTML)+1;
+            if(quantity==10){
+                alert('maximum quantity can be 10');
+            }
+            else{
+                element.innerHTML= quantity+1;
+            }
+
+        }
+
+        function decrement(){
+            const element=document.getElementById("product-quantity");
+            const quantity= parseInt(element.innerHTML);
+
+            //OR
+            // const element=document.getElementById("product-quantity");
+            //element.innerHTML=parseInt(element.innerHTML)+1;
+            if(quantity==1){
+                alert('minimum quantity can be 1');
+            }
+            else{
+                element.innerHTML=quantity-1;
+            }
+            
+        }
+    </script>
 </body>
 </html>
