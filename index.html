@@ -43,9 +43,26 @@
             margin: 5px auto;
             border-radius: 20px;
             border: 1px solid black;
-            padding: 4px;
+            padding: 5px;
             color: white;
+            cursor: pointer;
             
+        }
+        .quantity-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+        .quantity-btn{
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            background-color: #1a31c2d6;
+            border: none;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
         }
 
     </style>
@@ -56,6 +73,12 @@
         <img class="product-image" src="product.webp"/>
 
         <h2 class="heading">Salicylic Acid Gel Face Wash</h2>
+
+        <div class="quantity-container">
+            <button class="quantity-btn">+</button>
+            <span>1</span>
+            <button class="quantity-btn">-</button>
+        </div>
 
         <button class="button">Add To Cart</button>
 
